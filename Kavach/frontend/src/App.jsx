@@ -18,7 +18,7 @@ export default function App() {
     setAgentStatuses({ planner: "waiting", secrets: "waiting", dependency: "waiting", logic: "waiting", synthesizer: "waiting" })
 
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
+      const response = await fetch("http://kavach-38i4.onrender.com/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ repo_url: repoUrl })
